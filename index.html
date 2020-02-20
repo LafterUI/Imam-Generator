@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/animate/animate.css">
+
+	<title>Imam Generator</title>
+</head>
+<body>
+
+	<div id="page" class="isi-page">
+		<div class="">
+			<div class="container">
+				<div class="">
+					<div class="">
+						<div class="random mt-3">
+							<div class="text-center">
+								<img src="assets/img/imam-generator.png">
+							</div>
+							<blockquote class="blockquote text-center">sebuah cara baru untuk menentukan imam</blockquote>
+							<div class="wraper">
+								<div class="window">
+									<ul class="list">
+
+									</ul>
+									<ul class="list">
+										<li id="1"><img src="assets/img/hanip.jpg"></li>
+										<li id="2"><img src="assets/img/usna.jpg"></li>
+										<li id="3"><img src="assets/img/duta.jpg"></li>
+										<li id="4"><img src="assets/img/fillah.jpg"></li>
+										<li id="5"><img src="assets/img/hoshi.jpg"></li>
+										<li id="6"><img src="assets/img/encek.jpg"></li>
+										<li id="7"><img src="assets/img/joko.jpg"></li>
+										<li id="8"><img src="assets/img/agung.jpg"></li>
+										<li id="9"><img src="assets/img/rofi.jpg"></li>
+									</ul>
+								</div>
+							</div>
+							<p class="para text-center mt-4 mb-4" id="hasil"></p>
+							<!-- <p style="text-align: center"> -->
+								<div class="text-center">
+									<button class="button btn btn-success btn-lg ">Random</button>
+								</div>
+								<div class="win">
+									<ul>
+
+									</ul>
+								</div>
+
+								<div class="text-center mt-4">
+									<h4>TOTAL STREAK</h4>
+									<div class="data-img mt-3">
+										<div class="row justify-content-md-center">
+											<div class="col-lg-1 col-4 item">
+												<span id="Hanif" class="notify-badge">1</span>
+												<img src="assets/img/hanip.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Usna" class="notify-badge">1</span>
+												<img src="assets/img/usna.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Duta" class="notify-badge">1</span>
+												<img src="assets/img/duta.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Fillah" class="notify-badge">1</span>
+												<img src="assets/img/fillah.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Hoshi" class="notify-badge">1</span>
+												<img src="assets/img/hoshi.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Encek" class="notify-badge">1</span>
+												<img src="assets/img/encek.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Joko" class="notify-badge">1</span>
+												<img src="assets/img/joko.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Agung" class="notify-badge">1</span>
+												<img src="assets/img/agung.jpg" class="rounded-circle img-fluid">
+											</div>
+											<div class="col-lg-1 col-4 item">
+												<span id="Rofi" class="notify-badge">1</span>
+												<img src="assets/img/rofi.jpg" class="rounded-circle img-fluid">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="preloader">
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			var data = JSON.parse(localStorage.getItem('data_imam'))
+				// var imam = [
+				// 	{'id' : 0, 'nama' : null, 'count' : null},
+				// 	{'id' : 1, 'nama' : 'Hanif', 'count' : 0},
+				// 	{'id' : 2, 'nama' : 'Usna', 'count' : 0},
+				// 	{'id' : 3, 'nama' : 'Duta', 'count' : 0},
+				// 	{'id' : 4, 'nama' : 'Fillah', 'count' : 0},
+				// 	{'id' : 5, 'nama' : 'Hoshi', 'count' : 0},
+				// 	{'id' : 6, 'nama' : 'Encek', 'count' : 0},
+				// 	{'id' : 7, 'nama' : 'Joko', 'count' : 0},
+				// 	{'id' : 8, 'nama' : 'Agung', 'count' : 0},
+				// 	{'id' : 9, 'nama' : 'Rofi', 'count' : 0},
+				// ]
+				// localStorage.setItem('data_imam',JSON.stringify(imam))
+				$(document).ready(function () {
+					
+					$(window).on("load", function(){
+						$(".preloader").delay(1000).fadeOut("slow");
+						data.forEach(function (key,index) {
+							$('#'+key.nama).html(key.count)
+						})
+					})
+					for (i = 0; i < 3; i++) {
+						$(".list li").clone().appendTo(".list");
+					}
+					$('.button').click(function () {
+						$('#hasil').html('');
+						$('.window').css({
+							right: "0"
+						})
+						$('.list li').css({
+							border: '4px solid transparent'
+						})
+						function selfRandom(min, max) {
+							return Math.floor(Math.random() * (max - min + 1)) + min;
+						}
+						var x = selfRandom(50, 100);
+						$('.list li:eq('+x+')').css({
+							border:'4px solid #00ba00'
+						})
+						var id = $('.list li:eq('+x+')').get(0).id
+						$('.window').animate({
+							right: ((x*130)+(x*8-12)-119) 	
+						}, 5000)
+
+						$('.window').promise().done(()=>{
+							if(data[id].count >= 10){
+								$('#hasil').html('Ni anak dah 10 kali wakwakka, sad amat, Roll lagi gan');
+							}else{
+								data[id].count++;
+								$('#'+data[id].nama).html(data[id].count)
+								localStorage.setItem('data_imam',JSON.stringify(data))
+								$('#hasil').html(word(data[id].nama, data[id].count));
+							}
+						})
+					});
+				});
+				function word(name,count){
+					var list = [
+					`Bjirrr si ${name} imam, dah ${count} lagi kwkwkw`,
+					`Seep lu imam bgst ${name}, baru ${count} kali juga `
+					];
+					return list[Math.floor(Math.random()*list.length)];
+				}
+			</script>
+
+		</body>
+		</html>

@@ -1,0 +1,119 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: url('../assets/img/bg-imam.png') center center fixed no-repeat;
+	background-size: cover;
+}
+li{
+	list-style: none;
+	display: inline-block;
+	float: left;
+}
+.preloader{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+	background: url('../assets/img/logo.png') center center no-repeat rgb(255,255,255);
+	background-size: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+}
+.para{
+	font-size: 23px;
+}
+.random{
+	background: rgba(255, 255, 255, 0.7);
+	padding: 30px;
+	border-radius: 10px;
+	-webkit-box-shadow: 2px 1px 35px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 1px 35px -1px rgba(0,0,0,0.75);
+	box-shadow: 2px 1px 35px -1px rgba(0,0,0,0.75);
+}
+.random .blockquote{
+	color: #888888;
+}
+li {
+	list-style: none;
+	display: inline-block;
+	float: left;
+}
+
+.window {
+	overflow: hidden;
+	position: relative;
+	width: 25000px;
+	height: 143px;
+	right: 0px;
+}
+
+.wraper {
+	position: relative;
+	margin: auto;
+	width: 408px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	-webkit-box-shadow: 3px 4px 37px 2px rgba(0,0,0,0.47);
+	-moz-box-shadow: 3px 4px 37px 2px rgba(0,0,0,0.47);
+	box-shadow: 3px 4px 37px 2px rgba(0,0,0,0.47);
+	border-radius: 2px;
+}
+
+.list {
+	position: relative;
+	margin-left: 230;
+	display: inline-block;
+}
+
+.list li {
+	border: 4px solid transparent ;
+}
+.list li img {
+	width: 130px;
+	height: 130px;
+}
+
+
+.item {
+    position:relative;
+    padding-top:20px;
+    display:inline-block;
+}
+.notify-badge{
+    position: absolute;
+    right: 15px;
+    top:10px;
+    background:#208436;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color:white;
+    padding:5px 10px;
+    font-size:10px;
+}
+
+@media(max-width: 771px){
+	.preloader{
+		background-size: 60px;
+	}
+	.wraper{
+		width: 270px;
+	}
+	.notify-badge{
+		padding: 10px 15px;
+	}
+}
+@media(max-width: 450){
+	.preloader{
+		background-size: 50px;
+	}
+	.wraper{
+		width: 270px;
+	}
+}
